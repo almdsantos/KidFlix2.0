@@ -29,6 +29,9 @@
         "projectId": "6c878e5b-7949-461b-b1e3-7450cc862bae"
       }
     },
-    "owner": "amsantos"
+    "owner": "amsantos",
+    "plugins": [
+      "expo-font"
+    ]
   }
 }
