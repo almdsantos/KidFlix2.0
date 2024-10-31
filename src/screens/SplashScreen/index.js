@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { StyleSheet, View, ActivityIndicator} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { Logo, Text, Container } from '../../components'
 
-export const Splash = () => {
+export const SplashScreen = ({ navigation }) => {
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.navigate('Home')
+    }, 1000)
+  }, [navigation])
+
   return (
     <Container align="center" justify="center">
       <Logo />

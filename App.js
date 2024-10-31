@@ -1,16 +1,20 @@
-import React from 'react';
-import { Home } from './src/screens';
+import 'react-native-gesture-handler'
+import React, { useState, useEffect } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
 import { ThemeProvider } from 'styled-components';
+import AppLoading from 'expo-app-loading';
 
 SplashScreen.preventAutoHideAsync();
 
-import { SourceSansPro_400Regular,
+import { useFonts, 
+  SourceSansPro_400Regular,
   SourceSansPro_600SemiBold,
   SourceSansPro_700Bold,
-  SourceSansPro_900Black, useFonts } from '@expo-google-fonts/source-sans-pro';
+  SourceSansPro_900Black
+} from '@expo-google-fonts/source-sans-pro';
 
 import { theme } from './src/styles'
+import { Routes } from './src/routes'
 
 
 export default function App () {
@@ -25,7 +29,7 @@ export default function App () {
   }
   return (
     <ThemeProvider theme={theme}>
-      <Home />
+      <Routes />     
     </ThemeProvider>
   )
 };
